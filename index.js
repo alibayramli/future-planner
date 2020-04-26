@@ -42,7 +42,10 @@ function timePicker() {
     setTime();
   }
   function hour_down() {
-    if (hour > d.getHours()) {
+    if (hour === d.getHours() + 1 && minute >= d.getMinutes()) {
+      hour--;
+      errorMsg.style.display = "none";
+    } else if (hour > d.getHours() && hour !== d.getHours() + 1) {
       hour--;
       errorMsg.style.display = "none";
     } else {
