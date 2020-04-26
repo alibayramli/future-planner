@@ -4,17 +4,50 @@
     <title>Future Planner</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Allan"
+      rel="stylesheet"
+    />
   </head>
-  <div style="text-align: center; color: #fff;">
-    <h1>Welcome</h1>
-    <p>
-      Start designing your future by adding plans!
-    </p>
-    <p>The time:<span id="time"></span></p>
-  </div>
 
-  <img id="randpic" src="" alt="loading" />
   <body>
+    <h1>Future Planner</h1>
+    <h3>
+      The time:
+      <span id="time"></span>
+    </h3>
+
+    <div class="time-picker" data-time="00:00">
+      <div class="hour">
+        <div class="hr-up"></div>
+        <input
+          readonly
+          type="number"
+          class="hr"
+          value="00"
+          style="margin: 10%;"
+        />
+        <div class="hr-down"></div>
+      </div>
+
+      <div class="delimiter">:</div>
+      <div class="minute">
+        <div class="min-up"></div>
+        <input
+          readonly
+          type="number"
+          class="min"
+          value="00"
+          style="margin: 10%;"
+        />
+        <div class="min-down"></div>
+      </div>
+    </div>
+    <p class="error" style="display: none;">
+      Please choose a valid date (According to the local time)
+    </p>
+    <img id="randpic" src="" alt="loading" style="display: none;" />
+
     <script src="index.js"></script>
   </body>
 </html>
